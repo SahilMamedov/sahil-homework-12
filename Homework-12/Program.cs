@@ -14,7 +14,10 @@ namespace Homework_12
             Student stu3 = new Student("Lorem", "Ipsum", 98, 21);
             Student stu4 = new Student("Mamed", "Mamedov", 50, 29);
 
-            Console.WriteLine(stu1<stu2);
+            Console.WriteLine(stu1 < stu2);
+            Console.WriteLine(stu1 > stu4);
+            Console.WriteLine(stu3 > stu2);
+            Console.WriteLine(stu1 < stu3);
 
             Group group = new Group();
             Console.WriteLine(group.NO);

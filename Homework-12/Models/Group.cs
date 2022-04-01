@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Homework_12
 {
@@ -12,21 +9,21 @@ namespace Homework_12
         private static int _No = 101;
         public string NO { get; set; }
 
-        
 
-    public Group()
+
+        public Group()
         {
 
             Console.WriteLine($"AP{ _No++}");
-           
 
-           
+
+
         }
 
-       private List<Student> Students = new List<Student>();
+        private List<Student> Students = new List<Student>();
         public void AddStudent(Student student)
         {
-            
+
             Students.Add(student);
 
 
@@ -45,13 +42,15 @@ namespace Homework_12
                     $"Age: {student._Age}");
             }
         }      //  sort elemekcun arashdirma link
-              //   https://www.codegrepper.com/code-examples/csharp/c%23+how+to+sort+a+list+by+property
+               //   https://www.codegrepper.com/code-examples/csharp/c%23+how+to+sort+a+list+by+property
 
 
         public List<Student> Sort()
         {
 
-            List<Student> SortStudentList = Students.OrderBy(o => o._Point).ToList();
+            List<Student> SortStudentList = Students.OrderBy(student => student._Point).ToList();
+            Console.WriteLine();
+            Console.WriteLine("Sort olunmush Array");
             foreach (Student student in SortStudentList)
             {
                 Console.WriteLine();
@@ -60,8 +59,9 @@ namespace Homework_12
                     $"Surname: {student._SurName} \n" +
                     $"Age: {student._Age} \n" +
                     $"Point: {student._Point}");
+                
             }
-            
+
             return SortStudentList;
         }
 
