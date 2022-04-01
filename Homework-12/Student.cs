@@ -8,7 +8,7 @@ namespace Homework_12
 {
     class Student
     {
-        private int _Id { get; set; }
+        private static int _Id { get; set; }
         public string _Name { get; set; }
         public string _SurName { get; set; }
         public int _Point { get; set; }
@@ -31,6 +31,7 @@ namespace Homework_12
         {
             Console.WriteLine($"Id: {_Id} Name: {_Name} Surname: {_SurName} Point: {_Point} Age: {_Age}");
         }
+        
         
 
     }
