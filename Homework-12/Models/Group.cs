@@ -9,54 +9,16 @@ namespace Homework_12
 {
     class Group
     {
-        private static string _No { get; set; }
+        private static int _No = 101;
         public string NO { get; set; }
 
-        //public string no
-        //{
-        //    get
-        //    {
-        //        return _No;
-        //    }
-        //    set
-        //    {
-        //        string str = "AP101";
-        //        string digits = new string(value.Where(char.IsDigit).ToArray());
-        //        string letters = new string(value.Where(char.IsLetter).ToArray());
-
-        //        int number;
-        //        if (!int.TryParse(digits, out number)) //int.Parse would do the job since only digits are selected
-        //        {
-        //            Console.WriteLine("Something weired happened");
-        //        }
-
-        //        value = letters + (++number).ToString();
-        //        _No = value;
-
-        //    }
-        //}
-
-       // private Student[] Students;
         
+
     public Group()
         {
 
-            string No = "AP101";
-            string digits = new string(No.Where(char.IsDigit).ToArray());
-            string letters = new string(No.Where(char.IsLetter).ToArray());
-
-            int number;
-            if (!int.TryParse(digits, out number)) //int.Parse would do the job since only digits are selected
-            {
-                Console.WriteLine("Something weired happened");
-            }
-
-            No = letters + (++number).ToString();
-            //  No =No + No;
-
-           // _No = _No;
-            NO = No; 
-            //students = new Student[0];
+            Console.WriteLine($"AP{ _No++}");
+           
 
            
         }
@@ -82,7 +44,10 @@ namespace Homework_12
                     $"Point: {student._Point} \n" +
                     $"Age: {student._Age}");
             }
-        }
+        }      //  sort elemekcun arashdirma link
+              //   https://www.codegrepper.com/code-examples/csharp/c%23+how+to+sort+a+list+by+property
+
+
         public List<Student> Sort()
         {
 

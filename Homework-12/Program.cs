@@ -14,9 +14,11 @@ namespace Homework_12
             Student stu3 = new Student("Lorem", "Ipsum", 98, 21);
             Student stu4 = new Student("Mamed", "Mamedov", 50, 29);
 
+            Console.WriteLine(stu1<stu2);
+
             Group group = new Group();
-            Console.WriteLine(group.NO); 
-            
+            Console.WriteLine(group.NO);
+
             group.AddStudent(stu1);
             group.AddStudent(stu2);
             group.AddStudent(stu3);
@@ -24,12 +26,12 @@ namespace Homework_12
             group.GetAllStudents();
             group.Sort();
 
+
             Group group1 = new Group();
             Console.WriteLine(group.NO);
-            Group group2 = new Group();
-            Console.WriteLine(group.NO);
-            Group group3 = new Group();
-            Console.WriteLine(group.NO);
+           
+
+
            
         }
     }
