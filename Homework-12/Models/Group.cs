@@ -30,18 +30,27 @@ namespace Homework_12
          
               NO = _No;
 
+            Students = new Student[0];
 
             
         }
+        private Student[] Students;
 
-        private List<Student> Students = new List<Student>();
-        public void AddStudent(Student student)
+        public void AddStudent( Student student)
         {
-
-            Students.Add(student);
-
-
+            Array.Resize(ref Students, Students.Length + 1);
+            Students[Students.Length - 1] = student;
         }
+                           
+                            // 2-ci variant ;
+       // private List<Student> Students = new List<Student>();
+        //public void AddStudent(Student student)
+        //{
+
+        //    Students.Add(student);
+
+
+        //}
         public void GetAllStudents()
         {
             foreach (Student student in Students)
