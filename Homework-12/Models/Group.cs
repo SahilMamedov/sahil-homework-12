@@ -6,18 +6,32 @@ namespace Homework_12
 {
     class Group
     {
-        private static int _No = 101;
+        private static string _No = "AP101";
         public string NO { get; set; }
 
-
-
+        //private int No = 101;      2-ci variant
+        public static int Num { get; set; }
         public Group()
         {
 
-            Console.WriteLine($"AP{ _No++}");
+            // Console.WriteLine($"AP{ No++}");   2-ci variant
 
 
+            string digits = new string(_No.Where(char.IsDigit).ToArray());
+            string letters = new string(_No.Where(char.IsLetter).ToArray());
 
+            int number;
+            int.TryParse(digits, out number);
+
+            Num++;
+
+            _No = letters + (++number).ToString();
+            number += Num;
+         
+              NO = _No;
+
+
+            
         }
 
         private List<Student> Students = new List<Student>();

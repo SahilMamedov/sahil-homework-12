@@ -20,7 +20,12 @@ namespace Homework_12
             Console.WriteLine(stu1 < stu3);
 
             Group group = new Group();
+            Group group2 = new Group();
+            Group group3 = new Group();
             Console.WriteLine(group.NO);
+            Console.WriteLine(group2.NO);
+            Console.WriteLine(group3.NO);
+           
 
             group.AddStudent(stu1);
             group.AddStudent(stu2);
@@ -30,8 +35,8 @@ namespace Homework_12
             group.Sort();
 
 
-            Group group1 = new Group();
-            Console.WriteLine(group.NO);
+           // Group group1 = new Group();
+            //Console.WriteLine(group.NO);
            
 
 
